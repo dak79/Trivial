@@ -9,11 +9,11 @@ function right() {
     let green = document.querySelector('.rightChoice');
     green.style.color = 'green';
     green.innerHTML += '&#x2713; + 3 POINT';
+    point += 1.5;
+    document.querySelector('#point').innerHTML = point;
     for (let i = 1; i <= 4; i++) {
       document.querySelector('.all' + i).disabled = true;
     }
-    point += 3;
-    document.querySelector('#point').innerHTML = point;
     if (document.querySelector('.warning') !== '') {
       let warning = document.querySelector('.warning');
       warning.innerHTML = '';
