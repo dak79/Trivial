@@ -1,0 +1,133 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Source Sans Pro", sans-serif;
+  font-size: 1em;
+  font-weight: 400;
+  line-height: 1.3;
+}
+
+header {
+  display: flex;
+  flex-flow: row wrap;
+  margin: 0.5em;
+  padding: 0.7em;
+  background: linear-gradient(90deg, #3a3a3a, #1e1e1e, #000);
+  color: white;
+  font-weight: 700;
+  box-shadow: 10px 10px 10px black;
+}
+
+header h1 {
+  flex: 2 1 2em;
+}
+
+header p {
+  flex: 1 1 1em;
+}
+
+main {
+  display: flex;
+  flex-flow: column wrap;
+  border: 1px solid black;
+  justify-content: center;
+  align-items: center;
+  min-height: 70vh;
+  min-width: 50vw;
+  margin: 0.5em;
+  padding: 0.7em;
+  background: linear-gradient(90deg, #3a3a3a, #1e1e1e, #000);
+  color: white;
+  font-weight: 700;
+  box-shadow: 10px 10px 10px black;
+}
+
+.not-visible {
+  display: none;
+}
+
+section h2 {
+  font-size: 3em;
+  flex: 1;
+  text-align: center;
+  margin-bottom: 1em;
+}
+
+section p {
+  flex: 1;
+  text-align: center;
+}
+
+section div {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: center;
+}
+
+section button {
+  margin-top: 1.5em;
+  padding: 0.1em 0.3em;
+  outline: none;
+  border: none;
+  color: black;
+  background: linear-gradient(90deg, #3a3a3a, #d6d6d6, #e2e2e2, #fff, #3a3a3a);
+  box-shadow: 5px 5px 5px black;
+  border-radius: 0.2em;
+  transition: box-shadow 0.8s ease, transform 0.8s ease;
+  max-width: 4em;
+  align-self: center;
+}
+
+button:hover {
+  background: linear-gradient(90deg, #3a3a3a, #1e1e1e, #000);
+  color: white;
+  opacity: 0.5em;
+}
+
+button:active {
+  box-shadow: 0 0 0 black, inset 0.3em 0.3em 1em black;
+  transform: translate(0.3em, 0.3em);
+}
+
+ul {
+  list-style-type: none;
+}
+
+li {
+  padding: 0.4em;
+}
+
+.checkbox-container {
+  display: flex;
+  text-align: center;
+}
+
+.checkbox-container label {
+  display: flex;
+  cursor: pointer;
+}
+
+.checkbox-container input[type="checkbox"] {
+  cursor: pointer;
+  opacity: 0;
+  position: absolute;
+}
+
+.checkbox-container label::before {
+  content: "";
+  width: 0.8em;
+  height: 0.8em;
+  border: 0.15em solid white;
+  border-radius: 0.35em;
+  margin-right: 0.3em;
+}
+
+.checkbox-container input[type="checkbox"]:checked + label::before {
+  content: "\002713";
+  background-color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: black;
+}

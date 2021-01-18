@@ -1,0 +1,278 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Trivia</title>
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+    <script src="js/script.js"></script>
+  </head>
+  <header>
+    <h1>Trivia</h1>
+    <p>Point: <span id="point">0</span></p>
+    <p>Question: <span id="questionNumber">0</span></p>
+  </header>
+
+  <body>
+    <main id="question-container">
+      <section id="question1">
+        <h2>Welcome to the Trivia</h2>
+        <p>Click the button to start</p>
+        <div>
+          <button type="button" onclick="next();">Start</button>
+        </div>
+      </section>
+
+      <section id="question2" class="not-visible questionStyle displayQuestion1">
+        <div>
+          <h2>Which country has the biggest territorial extension in the World?</h2>
+        </div>
+        <div class="checkbox-container">
+          <ul>
+            <li><input type="checkbox" id="q1a" class="all1 wrongBox1" onclick="selectOnlyThis(id);">
+              <label for="q1a" class="wrongChoice1"> Canada </label>
+            </li>
+            <li><input type="checkbox" id="q2a" class="all2 wrongBox2" onclick="selectOnlyThis(id);">
+              <label for="q2a" class="wrongChoice2"> America </label>
+            </li>
+            <li><input type="checkbox" id="q3a" class="all3 rightBox" onclick="selectOnlyThis(id);">
+              <label for="q3a" class="rightChoice"> Russia </label>
+            </li>
+            <li><input type="checkbox" id="q4a" class="all4 wrongBox3" onclick="selectOnlyThis(id);">
+              <label for="q4a" class="wrongChoice3"> Cina </label>
+            </li>
+          </ul>
+        </div>
+        <button type="button" onclick="right();">Check It</button>
+        <button type="button" onclick="next();">Next</button>
+      </section>
+
+      <section id="question3" class="not-visible questionStyle displayQuestion2">
+        <div>
+          <h2>Which country confines with more other States?</h2>
+        </div>
+        <div class="checkbox-container">
+          <ul>
+            <li><input type="checkbox" id="q5a" class="all1 wrongBox1" onclick="selectOnlyThis(id);">
+              <label for="q5a" class="wrongChoice1"> Afghanistan </label>
+            </li>
+            <li><input type="checkbox" id="q6a" class="all2 wrongBox2" onclick="selectOnlyThis(id);">
+              <label for="q6a" class="wrongChoice2"> Russia </label>
+            </li>
+            <li><input type="checkbox" id="q7a" class="all3 wrongBox3" onclick="selectOnlyThis(id);">
+              <label for="q7a" class="wrongChoice3"> Kazakistan</label>
+            </li>
+            <li><input type="checkbox" id="q8a" class="all4 rightBox" onclick="selectOnlyThis(id);">
+              <label for="q8a" class="rightChoice"> Cina </label>
+            </li>
+          </ul>
+        </div>
+        <button type="button" onclick="right();">Check It</button>
+        <button type="button" onclick="next();">Next</button>
+      </section>
+
+      <section id="question4" class="not-visible questionStyle  displayQuestion3">
+        <div>
+          <h2>Which country has more lake in his own territory?</h2>
+        </div>
+        <div class="checkbox-container">
+          <ul>
+            <li><input type="checkbox" id="q9a" class="all1 wrongBox1" onclick="selectOnlyThis(id);">
+              <label for="q9a" class="wrongChoice1"> Finland </label>
+            </li>
+            <li><input type="checkbox" id="q10a" class="all2 rightBox" onclick="selectOnlyThis(id);">
+              <label for="q10a" class="rightChoice"> Canada </label>
+            </li>
+            <li><input type="checkbox" id="q11a" class="all3 wrongBox2" onclick="selectOnlyThis(id);">
+              <label for="q11a" class="wrongChoice2"> Brazil </label>
+            </li>
+            <li><input type="checkbox" id="q12a" class="all4 wrongBox3" onclick="selectOnlyThis(id);">
+              <label for="q12a" class="wrongChoice3"> India </label>
+            </li>
+          </ul>
+        </div>
+        <button type="button" onclick="right();">Check It</button>
+        <button type="button" onclick="next();">Next</button>
+      </section>
+
+      <section id="question5" class="not-visible questionStyle displayQuestion4">
+        <div>
+          <h2>Which is the coldest place in the World?</h2>
+        </div>
+        <div class="checkbox-container">
+          <ul>
+            <li><input type="checkbox" id="q13a" class="all1 rightBox" onclick="selectOnlyThis(id);">
+              <label for="q13a" class="rightChoice"> Dome Fuji, Antarctica </label>
+            </li>
+            <li><input type="checkbox" id="q14a" class="all2 wrongBox1" onclick="selectOnlyThis(id);">
+              <label for="q14a" class="wrongChoice1"> Mount McKinley, Alaska</label>
+            </li>
+            <li><input type="checkbox" id="q15a" class="all3 wrongBox2" onclick="selectOnlyThis(id);">
+              <label for="q15a" class="wrongChoice2"> Verkhoyansk, Russia </label>
+            </li>
+            <li><input type="checkbox" id="q16a" class="all4 wrongBox3" onclick="selectOnlyThis(id);">
+              <label for="q16a" class="wrongChoice3"> Klinck station, Greenland </label>
+            </li>
+          </ul>
+        </div>
+        <button type="button" onclick="right();">Check It</button>
+        <button type="button" onclick="next();">Next</button>
+      </section>
+
+      <section id="question6" class="not-visible questionStyle displayQuestion5">
+        <div>
+          <h2>Which is the hottest place in the World?</h2>
+        </div>
+        <div class="checkbox-container">
+          <ul>
+            <li><input type="checkbox" id="q17a" class="all1 wrongBox1" onclick="selectOnlyThis(id);">
+              <label for="q17a" class="wrongChoice1"> Ghadames, Libya </label>
+            </li>
+            <li><input type="checkbox" id="q18a" class="all2 wrongBox2" onclick="selectOnlyThis(id);">
+              <label for="q18a" class="wrongChoice2"> Aziziyah, Libya</label>
+            </li>
+            <li><input type="checkbox" id="q19a" class="all3 rightBox" onclick="selectOnlyThis(id);">
+              <label for="q19a" class="rightChoice"> Dasht-e Loot, Iran </label>
+            </li>
+            <li><input type="checkbox" id="q20a" class="all4 wrongBox3" onclick="selectOnlyThis(id);">
+              <label for="q20a" class="wrongChoice3"> Bandar-e Mahshahr, Iran </label>
+            </li>
+          </ul>
+        </div>
+        <button type="button" onclick="right();">Check It</button>
+        <button type="button" onclick="next();">Next</button>
+      </section>
+
+      <section id="question7" class="not-visible questionStyle displayQuestion6">
+        <div>
+          <h2>Which of following country has no access to sea?</h2>
+        </div>
+        <div class="checkbox-container">
+          <ul>
+            <li><input type="checkbox" id="q21a" class="all1 rightBox" onclick="selectOnlyThis(id);">
+              <label for="q21a" class="rightChoice"> Serbia </label>
+            </li>
+            <li><input type="checkbox" id="q22a" class="all2 wrongBox1" onclick="selectOnlyThis(id);">
+              <label for="q22a" class="wrongChoice1"> Lithuania</label>
+            </li>
+            <li><input type="checkbox" id="q23a" class="all3 wrongBox2" onclick="selectOnlyThis(id);">
+              <label for="q23a" class="wrongChoice2"> Poland </label>
+            </li>
+            <li><input type="checkbox" id="q24a" class="all4 wrongBox3" onclick="selectOnlyThis(id);">
+              <label for="q24a" class="wrongChoice3"> Slovenija </label>
+            </li>
+          </ul>
+        </div>
+        <button type="button" onclick="right();">Check It</button>
+        <button type="button" onclick="next();">Next</button>
+      </section>
+
+      <section id="question8" class="not-visible questionStyle displayQuestion7">
+        <div>
+          <h2>Which country has the most of coastline?</h2>
+        </div>
+        <div class="checkbox-container">
+          <ul>
+            <li><input type="checkbox" id="q25a" class="all1 wrongBox1" onclick="selectOnlyThis(id);">
+              <label for="q25a" class="wrongChoice1"> Indonesia </label>
+            </li>
+            <li><input type="checkbox" id="q26a" class="all2 wrongBox2" onclick="selectOnlyThis(id);">
+              <label for="q26a" class="wrongChoice2"> Norwey </label>
+            </li>
+            <li><input type="checkbox" id="q27a" class="all3 wrongBox3" onclick="selectOnlyThis(id);">
+              <label for="q27a" class="wrongChoice3"> Greenland </label>
+            </li>
+            <li><input type="checkbox" id="q28a" class="all4 rightBox" onclick="selectOnlyThis(id);">
+              <label for="q28a" class="rightChoice"> Canada </label>
+            </li>
+          </ul>
+        </div>
+        <button type="button" onclick="right();">Check It</button>
+        <button type="button" onclick="next();">Next</button>
+      </section>
+
+      <section id="question9" class="not-visible questionStyle displayQuestion8">
+        <div>
+          <h2>Which country has the smallest territorial extension in the World?</h2>
+        </div>
+        <div class="checkbox-container">
+          <ul>
+            <li><input type="checkbox" id="q29a" class="all1 wrongBox1" onclick="selectOnlyThis(id);">
+              <label for="q29a" class="wrongChoice1"> Republic of San Marino </label>
+            </li>
+            <li><input type="checkbox" id="q30a" class="all2 wrongBox2" onclick="selectOnlyThis(id)">
+              <label for="q30a" class="wrongChoice2"> Principality of Monaco </label>
+            </li>
+            <li><input type="checkbox" id="q31a" class="all3 rightBox" onclick="selectOnlyThis(id);">
+              <label for="q31a" class="rightChoice"> Vatican City </label>
+            </li>
+            <li><input type="checkbox" id="q32a" class="all4 wrongBox3" onclick="selectOnlyThis(id);">
+              <label for="q32a" class="wrongChoice3"> Tuvalu </label>
+            </li>
+          </ul>
+        </div>
+        <button type="button" onclick="right();">Check It</button>
+        <button type="button" onclick="next();">Next</button>
+      </section>
+
+      <section id="question10" class="not-visible questionStyle displayQuestion9">
+        <div>
+          <h2>Which country is the most visited one?</h2>
+        </div>
+        <div class="checkbox-container">
+          <ul>
+            <li><input type="checkbox" id="q33a" class="all1 wrongBox1" onclick="selectOnlyThis(id);">
+              <label for="q33a" class="wrongChoice1"> Cina </label>
+            </li>
+            <li><input type="checkbox" id="q34a" class="all2 wrongBox2" onclick="selectOnlyThis(id);">
+              <label for="q34a" class="wrongChoice2"> Italy </label>
+            </li>
+            <li><input type="checkbox" id="q35a" class="all3 rightBox" onclick="selectOnlyThis(id);">
+              <label for="q35a" class="rightChoice"> France </label>
+            </li>
+            <li><input type="checkbox" id="q36a" class="all4 wrongBox3" onclick="selectOnlyThis(id);">
+              <label for="q36a" class="wrongChoice3"> Spain </label>
+            </li>
+          </ul>
+        </div>
+        <button type="button" onclick="right();">Check It</button>
+        <button type="button" onclick="next();">Next</button>
+      </section>
+
+      <section id="question11" class="not-visible questionStyle displayQuestion10">
+        <div>
+          <h2>Which country has the oldest population?</h2>
+        </div>
+        <div class="checkbox-container">
+          <ul>
+            <li><input type="checkbox" id="q37a" class="all1 rightBox" onclick="selectOnlyThis(id);">
+              <label for="q37a" class="rightChoice"> Japan </label>
+            </li>
+            <li><input type="checkbox" id="q38a" class="all2 wrongBox1" onclick="selectOnlyThis(id);">
+              <label for="q38a" class="wrongChoice1"> Ukraine </label>
+            </li>
+            <li><input type="checkbox" id="q39a" class="all3 wrongBox2" onclick="selectOnlyThis(id);">
+              <label for="q39a" class="wrongChoice2"> Germany </label>
+            </li>
+            <li><input type="checkbox" id="q40a" class="all4 wrongBox3" onclick="selectOnlyThis(id);">
+              <label for="q40a" class="wrongChoice3"> Greece </label>
+            </li>
+          </ul>
+        </div>
+        <button type="button" onclick="right();">Check It</button>
+        <button type="button" onclick="next();">Next</button>
+      </section>
+      <section id="question12" class="not-visible questionStyle displayQuestion11">
+        <div id="totalPoint">
+          <h2>Total Point: <span id="total"></span></h2>
+        </div>
+        <button type="button" onclick="reloadPage();">Try Again</button>
+      </section>
+    </main>
+  </body>
+
+</html>
