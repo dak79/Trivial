@@ -3,6 +3,8 @@ let qNumb = 0;
 let i = 0;
 let test = false;
 
+
+// For checking if the answer is correct
 function right() {
 
   if (document.querySelector('.rightBox').checked === true) {
@@ -61,6 +63,7 @@ function right() {
   }
 }
 
+// For changing page
 function next() {
   let test = right();
   i += 1;
@@ -71,6 +74,11 @@ function next() {
     let questionOne = document.querySelector('.displayQuestion' + i);
     questionOne.style.display = 'flex';
     questionOne.style.flexFlow = 'column';
+    //Event Listener
+    for (let i = 1; i <= 4; i++) {
+      let answer = document.querySelector('.all' + i);
+      answer.addEventListener('input', right);
+    }
     if (qNumb === 10) {
       let questionNumber = document.querySelector('#questionNumber');
       questionNumber.innerHTML = '10/10';
@@ -90,15 +98,16 @@ function next() {
     warning.innerHTML = 'Forgot to answer?';
   }
 }
-
-function selectOnlyThis(id) {
+// For let only one checked when we click checkbox - not in use
+/* function selectOnlyThis(id) {
 
   for (var i = 1; i <= 4; i++) {
     document.querySelector('.all' + i).checked = false;
   }
   document.getElementById(id).checked = true;
 }
-
+*/
+// Reload page for start again the game
 function reloadPage() {
   window.location.reload();
 }
